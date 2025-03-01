@@ -1,4 +1,7 @@
-const fastify = require('fastify')({ logger: true })
+const fastify = require('fastify')({ 
+  logger: true,
+  trustProxy: true // Add this for Vercel
+})
 const fetch = require('node-fetch')
 
 async function buildServer() {
@@ -13,6 +16,7 @@ async function buildServer() {
         url: 'http://localhost:3000'
       }]
     }
+  return fastify;
   })
 
   await fastify.register(require('@fastify/swagger-ui'), {

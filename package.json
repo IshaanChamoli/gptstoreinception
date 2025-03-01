@@ -1,18 +1,19 @@
 {
-  "name": "gptstoreinception",
+  "name": "hono-url-query-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch api/index.js",
+    "deploy": "vercel deploy"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@fastify/swagger": "^9.4.2",
-    "@fastify/swagger-ui": "^5.2.2",
-    "fastify": "^5.2.1",
-    "node-fetch": "^2.7.0"
+    "@hono/node-server": "^1.13.8",
+    "@hono/zod-openapi": "^0.9.5",
+    "hono": "^3.12.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "vercel": "^32.3.0"
   }
 }
