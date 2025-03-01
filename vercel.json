@@ -1,5 +1,4 @@
 {
-    "framework": "Hono",
     "rewrites": [
       { "source": "/(.*)", "destination": "/api/index.js" }
     ]
